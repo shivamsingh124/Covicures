@@ -1,0 +1,143 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>COVID HELP</title>
+	<script src="https://code.jquery.com/jquery-3.5.1.js">
+	</script>
+
+	<style>
+	
+		.table {
+			margin: 0 auto;
+			font-size: large;
+			border: 1px solid black;
+			background-color: #b3f7a2;
+		}
+		
+
+		h1 {
+			z-index: 1000000;
+			position: sticky;
+			text-align: center;
+			color: #006600;
+			font-size: 4rem;
+			font-family: 'Gill Sans',
+				'Gill Sans MT', ' Calibri',
+				'Trebuchet MS', 'sans-serif';
+		}
+
+		td {
+			background-color: #E4F5D4;
+			border: 1px solid black;
+		}
+		body {
+     background-image: url('covid.png'); 
+    background-size: cover; 
+    /* overflow: hidden; */
+    /* height: 100vh; */
+}
+
+		th,
+		td {
+			font-weight: bold;
+			border: 1px solid black;
+			padding: 10px;
+			text-align: center;
+		}
+
+		td {
+			font-weight: bolder;
+		}
+		.head{		
+    background-color: rgb(243, 250, 182);
+		}
+		input{
+		    text-align: center;
+    font-size: larger;
+	border: 0px;
+		}
+		.two{
+		display: flex;
+		}
+		.rect{top: 11px;height: 68px;border: 5px solid cornflowerblue;position: absolute;border-radius: 23px;left: 795px;/* color: white; */background-color: aliceblue;/* z-index: 10000; */width: 301px;}
+	</style>
+</head>
+
+<body>
+	<section>
+		<div class="rect"></div>
+		<h1>CoviCure </h1>
+	</head>
+	<body>
+		<div class='two'>
+		<table  class='table'>
+			<thead class='head'>
+						<th>DONOR</th>
+						<th>NEEDY</th>
+			</thead>      
+			<tbody id="donor"></tbody>  
+			</table>
+	
+	
+			<table class='table' >
+				<thead class='head'>
+					<tr>
+						<th>MESSAGE DELIVERED TO </th>
+					</tr>
+				</thead>
+				<tbody id="need"></tbody>  
+			</table>
+	
+	
+					<table class='table' >
+						<thead class='head'>
+							<tr>
+								<th>MESSAGE NOT DELIVERED TO </th>
+							</tr>
+						</thead>
+						<tbody id="need1"></tbody>  
+			</table>
+	
+	
+		</div>
+
+           
+        </script>
+	</section>
+
+	
+<script>
+for (let i = 0; i <30; i++)
+{  
+ 
+    var table = document.getElementById("donor");
+	let ticketModal = document.createElement("tr");
+	ticketModal.innerHTML = `<th><input type ="text"></th>
+				<th><input type ="text"></th>`;
+    
+		document.getElementById("donor").append(ticketModal);
+}
+
+for (let i = 0; i <30; i++)
+{  
+	var table = document.getElementById("need");
+	let ticketModal = document.createElement("tr");
+	ticketModal.innerHTML = `<th><input type ="text"></th>`;
+   
+		document.getElementById("need").append(ticketModal);
+}
+
+
+for (let i = 0; i <30; i++)
+{  
+
+	var table = document.getElementById("need1");
+	let ticketModal = document.createElement("tr");
+	ticketModal.innerHTML = `<th><input type ="text"></th>`;
+		document.getElementById("need1").append(ticketModal);
+}
+</script>
+<script src="htmlUpdate.js"></script>
+</body>
+
+</html>

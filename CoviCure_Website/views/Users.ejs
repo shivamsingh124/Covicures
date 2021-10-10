@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>DONORS AND HELP-SEEKERS</title>
+
+    <style>
+      .table {
+        margin: 0 auto;
+        font-size: large;
+        border: 1px solid black;
+        background-color: #b3f7a2;
+      }
+
+      h1 {
+        z-index: 1000000;
+        position: sticky;
+        text-align: center;
+        color: #006600;
+        font-size: 4rem;
+        font-family: "Gill Sans", "Gill Sans MT", " Calibri", "Trebuchet MS",
+          "sans-serif";
+      }
+
+      td {
+        background-color: #e4f5d4;
+        border: 1px solid black;
+      }
+
+      body {
+        background-image: url("images/image2.png");
+        background-size: cover;
+      }
+
+      th,
+      td {
+        font-weight: bold;
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+      }
+
+      td {
+        font-weight: bolder;
+      }
+
+      .head {
+        background-color: rgb(243, 250, 182);
+      }
+
+      input {
+        text-align: center;
+        font-size: larger;
+        border: 0px;
+      }
+
+      .two {
+        display: flex;
+      }
+
+      .rect {
+        top: 40px;
+        height: 68px;
+        border: 5px solid cornflowerblue;
+        position: absolute;
+        border-radius: 23px;
+        left: 42vw;
+        background-color: aliceblue;
+        width: 301px;
+      }
+
+      .button {
+        color: #fff;
+        background-color: #009090;
+        text-transform: capitalize;
+        border-radius: 0.5rem;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="rect"></div>
+    <h1>CoviCure</h1>
+    <table class="table">
+      <thead class="head">
+        <th>NAME</th>
+        <th>CATEGORY</th>
+        <th>FREE DONOR</th>
+        <th>RESOURCE</th>
+        <th>CONTACT</th>
+      </thead>
+      <% users.forEach(function(eachUser){ %>
+      <tr>
+        <td><%= eachUser.fullname %></td>
+        <!-- <td><%= eachUser.email %></td> -->
+        <!-- <td><%= eachUser.add %></td> -->
+        <td><%= eachUser.category %></td>
+        <td><%= eachUser.vaccinated %></td>
+        <td><%= eachUser.msg %></td>
+        <td>
+          <a href="mailto:" + <%="eachUser.email" %>
+            ><button class="button">E-mail</button></a
+          >
+        </td>
+      </tr>
+      <% }) %>
+    </table>
+  </body>
+</html>
