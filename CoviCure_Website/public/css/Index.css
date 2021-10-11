@@ -123,6 +123,8 @@ header {
   padding: 2rem 1rem;
   z-index: 1000;
 }
+.padding{
+padding:21vh;
 
 .header-active {
   background: #fff;
